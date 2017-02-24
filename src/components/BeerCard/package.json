@@ -1,0 +1,6 @@
+{
+  "name": "BeerCard",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./BeerCard.js"
+}
