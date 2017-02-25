@@ -20,7 +20,7 @@ const beerList = {
     category: 'Pale Ale',
     ABV: 6.5,
     IBU: 35,
-    fullness: 97,
+    fullness: 50,
   },
   1: {
     name: 'King Julius',
@@ -28,7 +28,15 @@ const beerList = {
     category: 'Imperial IPA',
     ABV: 8.3,
     IBU: 85,
-    fullness: 97,
+    fullness: 10,
+  },
+  2: {
+    name: 'Dos Equis',
+    brewery: 'IDK',
+    category: 'Bad',
+    ABV: 8.3,
+    IBU: 85,
+    fullness: 100,
   },
 };
 

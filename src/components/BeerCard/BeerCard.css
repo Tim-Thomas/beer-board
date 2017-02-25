@@ -27,23 +27,30 @@
   position: absolute;
 }
 
-.text {
+.text, .nameText, .brewText {
   display: block;
 }
 
-.fullnessMeter {
+.fullnessMeterWrapper {
   display: inline-block;
-  border: white solid 2px;
-  font-size: 50px;
+  box-sizing: border-box;
+  width: 90px;
+}
+
+.fullnessMeterBox {
+  position: absolute;
+  top: 50%;
   height: 90px;
   width: 90px;
+  box-sizing: border-box;
+  border: white 2px solid;
+  margin-top: -45px;
   text-align: center;
-  margin-top: 12px;
-  position: relative;
+  line-height: 90px;
 }
 
 .fullnessMeterText {
-  vertical-align: -webkit-baseline-middle;
+  font-size: 50px;
 }
 
 .mainInfo {
@@ -57,4 +64,12 @@
   float: right;
   text-align: right;
   margin-top: 12px;
+}
+
+.nameText {
+  font-size: 60px;
+}
+
+.brewText {
+  font-size: 40px;
 }
