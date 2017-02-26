@@ -36,8 +36,22 @@ class BeerCard extends React.Component {
           </div>
           <div className={s.secondaryInfo}>
             <span className={s.categoryText}>{this.props.beer.category}</span>
-            <span className={s.text}>ABV: {this.props.beer.ABV}</span>
-            <span className={s.text}>IBU: {this.props.beer.IBU}</span>
+            <div>
+              <span className={s.ABVValue}>
+                {this.props.beer.ABV}%
+              </span>
+              <span className={s.ABVLabel}>
+                &nbsp;ABV
+              </span>
+            </div>
+            <div>
+              <span className={s.IBUValue}>
+                {this.props.beer.IBU}
+              </span>
+              <span className={s.IBULabel}>
+                &nbsp;IBU
+              </span>
+            </div>
           </div>
         </div>
       </div>

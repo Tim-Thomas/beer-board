@@ -27,10 +27,6 @@
   position: absolute;
 }
 
-.text {
-  display: block;
-}
-
 .mainInfo {
   display: inline-block;
   padding-left: 10px;
@@ -42,6 +38,8 @@
   float: right;
   text-align: right;
   margin-top: 12px;
+  line-height: 30px;
+  color: #ff6400;
 }
 
 .nameText {
@@ -59,5 +57,16 @@
 }
 
 .categoryText {
+  color: #fff;
+}
+
+.categoryText,
+.ABVValue,
+.IBUValue {
   font-size: 30px;
+}
+
+.ABVLabel,
+.IBULabel {
+  font-size: 20px;
 }

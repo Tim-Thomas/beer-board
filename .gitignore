@@ -10,3 +10,4 @@ stats.json
 report.html
 .DS_Store
 .idea/
+*.iml

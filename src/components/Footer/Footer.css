@@ -15,11 +15,10 @@
 
 .laserCat {
   background-image: url('../../../public/laser_cat.png');
-  background-size: 80px 64px;
+  background-size: 100px 81px;
   display: inline-block;
-  width: 80px;
-  height: 64px;
-  margin-bottom: 8px;
+  width: 100px;
+  height: 81px;
   vertical-align: bottom;
 }
 
@@ -34,5 +33,6 @@
 .text {
   font-size: 45px;
   text-shadow: 2px 2px 3px #000;
-  padding: 2px 5px;
+  line-height: 45px;
+  padding-left: 10px;
 }

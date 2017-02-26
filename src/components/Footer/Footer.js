@@ -13,10 +13,12 @@ import s from './Footer.css';
 
 class Footer extends React.Component {
   render() {
+    /* Randomly left/right facing laser cat */
+    const laserCatStyle = `scale(${Math.random() > 0.5 ? '1' : '-1'},1)`;
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <span className={s.laserCat} />
+          <span className={s.laserCat} style={{ transform: laserCatStyle }} />
           <span className={s.text}>* alcohol for Indeed employees only</span>
         </div>
       </div>
