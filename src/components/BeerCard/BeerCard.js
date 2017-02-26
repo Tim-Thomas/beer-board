@@ -21,7 +21,7 @@ class BeerCard extends React.Component {
       category: PropTypes.string.isRequired,
       ABV: PropTypes.any.isRequired,
       IBU: PropTypes.any.isRequired,
-      fullness: PropTypes.number
+      fullness: PropTypes.number,
     }).isRequired,
   };
 
@@ -29,13 +29,13 @@ class BeerCard extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <BeerMeter id={this.props.beer.id} fullness={this.props.beer.fullness}/>
+          <BeerMeter id={this.props.beer.id} fullness={this.props.beer.fullness} />
           <div className={s.mainInfo}>
             <span className={s.brewText}>{this.props.beer.brewery}</span>
             <span className={s.nameText}>{this.props.beer.name}</span>
           </div>
           <div className={s.secondaryInfo}>
-            <span className={s.text}>Category: {this.props.beer.category}</span>
+            <span className={s.categoryText}>{this.props.beer.category}</span>
             <span className={s.text}>ABV: {this.props.beer.ABV}</span>
             <span className={s.text}>IBU: {this.props.beer.IBU}</span>
           </div>

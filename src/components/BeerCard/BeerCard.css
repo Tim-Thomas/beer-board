@@ -27,30 +27,8 @@
   position: absolute;
 }
 
-.text, .nameText, .brewText {
+.text {
   display: block;
-}
-
-.fullnessMeterWrapper {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 90px;
-}
-
-.fullnessMeterBox {
-  position: absolute;
-  top: 50%;
-  height: 90px;
-  width: 90px;
-  box-sizing: border-box;
-  border: white 2px solid;
-  margin-top: -45px;
-  text-align: center;
-  line-height: 90px;
-}
-
-.fullnessMeterText {
-  font-size: 50px;
 }
 
 .mainInfo {
@@ -68,8 +46,18 @@
 
 .nameText {
   font-size: 60px;
+  position: absolute;
+  bottom: 4px;
+  line-height: 60px;
 }
 
 .brewText {
   font-size: 40px;
+  position: absolute;
+  top: 12px;
+  line-height: 40px;
+}
+
+.categoryText {
+  font-size: 30px;
 }
