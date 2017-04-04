@@ -1,6 +1,0 @@
-Admin page
-Sqllite integration
-Untappd integration
-Influxdb integration
-Clean up code further
-Unit tests?

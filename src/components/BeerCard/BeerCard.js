@@ -31,25 +31,20 @@ class BeerCard extends React.Component {
         <div className={s.container}>
           <BeerMeter id={this.props.beer.id} fullness={this.props.beer.fullness} />
           <div className={s.mainInfo}>
-            <span className={s.brewText}>{this.props.beer.brewery}</span>
-            <span className={s.nameText}>{this.props.beer.name}</span>
-          </div>
-          <div className={s.secondaryInfo}>
-            <span className={s.categoryText}>{this.props.beer.category}</span>
-            <div>
+            <div className={s.brewText}>{this.props.beer.brewery}</div>
+            <div className={s.nameText} style={{ textDecoration: this.props.beer.fullness === 0 ? 'line-through' : '' }}>{this.props.beer.name} | {this.props.beer.category}</div>
+            <div className={s.secondaryInfo}>
               <span className={s.ABVValue}>
                 {this.props.beer.ABV}%
               </span>
               <span className={s.ABVLabel}>
-                &nbsp;ABV
+              &nbsp;ABV
               </span>
-            </div>
-            <div>
               <span className={s.IBUValue}>
-                {this.props.beer.IBU}
+                {this.props.beer.IBU ? ` / ${this.props.beer.IBU}` : ''}
               </span>
               <span className={s.IBULabel}>
-                &nbsp;IBU
+                {this.props.beer.IBU ? 'IBU' : ''}
               </span>
             </div>
           </div>

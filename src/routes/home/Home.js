@@ -11,7 +11,9 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import BeerCard from '../../components/BeerCard';
 import Footer from '../../components/Footer';
+import fetch from '../../core/fetch';
 import s from './Home.css';
+
 
 class Home extends React.Component {
   static propTypes = {
@@ -19,9 +21,39 @@ class Home extends React.Component {
       id: PropTypes.number.isRequired,
     })).isRequired,
   };
+  constructor(props) {
+    super(props);
+    this.state = { beers: this.props.beers };
+  }
+  componentDidMount() {
+    this.timerID = setInterval(() => this.fetchBeers(), 5000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.timerID);
+  }
+  async fetchBeers() {
+    const resp = await fetch('/graphql', {
+      method: 'post',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        query: '{beer0:beer(id:0){id,name,category,ABV,IBU,fullness,brewery}' +
+        'beer1:beer(id:1){id,name,category,ABV,IBU,fullness,brewery}' +
+        'beer2:beer(id:2){id,name,category,ABV,IBU,fullness,brewery}' +
+        'beer3:beer(id:3){id,name,category,ABV,IBU,fullness,brewery}' +
+        'beer4:beer(id:4){id,name,category,ABV,IBU,fullness,brewery}}',
+      }),
+    });
+    const { data } = await resp.json();
+    this.setState(
+      { beers: [data.beer0, data.beer1, data.beer2, data.beer3, data.beer4].filter(item => item) },
+    );
+  }
 
   render() {
-    const beerCards = this.props.beers.map(beer =>
+    const beerCards = this.state.beers.map(beer =>
       beer && <BeerCard key={beer.id} beer={beer} />,
     );
     return (

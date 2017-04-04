@@ -13,7 +13,6 @@
   background: #000;
   color: #fff;
   margin-bottom: 15px;
-  min-height: 120px;
   position: relative;
 }
 
@@ -24,7 +23,6 @@
   height: 100%;
   width: 100%;
   box-sizing: border-box;
-  position: absolute;
 }
 
 .mainInfo {
@@ -35,32 +33,25 @@
 
 .secondaryInfo {
   display: inline-block;
-  float: right;
   text-align: right;
-  margin-top: 12px;
+  padding: 15px 0;
   line-height: 30px;
   color: #ff6400;
 }
 
 .nameText {
   font-size: 60px;
-  position: absolute;
   bottom: 4px;
   line-height: 60px;
 }
 
 .brewText {
   font-size: 40px;
-  position: absolute;
   top: 12px;
   line-height: 40px;
+  padding: 15px 0;
 }
 
-.categoryText {
-  color: #fff;
-}
-
-.categoryText,
 .ABVValue,
 .IBUValue {
   font-size: 30px;
@@ -68,5 +59,5 @@
 
 .ABVLabel,
 .IBULabel {
-  font-size: 20px;
+  font-size: 30px;
 }

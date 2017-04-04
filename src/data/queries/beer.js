@@ -11,34 +11,30 @@ import {
   GraphQLInt as IntType,
   GraphQLNonNull as NonNull,
 } from 'graphql';
+import * as fs from 'fs';
 import BeerType from '../types/BeerType';
 
-const beerList = {
-  0: {
-    name: 'Drumroll APA',
-    brewery: 'Odell',
-    category: 'Pale Ale',
-    ABV: 6.5,
-    IBU: 35,
-    fullness: 50,
-  },
-  1: {
-    name: 'King Julius',
-    brewery: 'Tree House',
-    category: 'Imperial IPA',
-    ABV: 8.3,
-    IBU: 85,
-    fullness: 10,
-  },
-  2: {
-    name: 'Dos Equis',
-    brewery: 'IDK',
-    category: 'Bad',
-    ABV: 8.3,
-    IBU: 85,
-    fullness: 100,
-  },
+const beerDataDir = 'C:\\Users\\Tim\\Desktop\\beer-board\\beer-data';
+const beers = {};
+let beerList = {};
+
+const updateTaps = function updateTaps() {
+  beerList = JSON.parse(fs.readFileSync(`${beerDataDir}\\kegs.txt`, 'utf8'));
+  for (let i = 0; i < 6; i += 1) {
+    if (beerList[i] && beers[beerList[i]]) {
+      beerList[i] = beers[beerList[i]];
+    }
+  }
 };
+updateTaps();
+
+const updateBeers = function updateBeers() {
+  const files = fs.readdirSync(`${beerDataDir}\\beers`, 'utf8');
+  files.forEach((element) => {
+    beers[element] = JSON.parse(fs.readFileSync(`${beerDataDir}\\beers\\${element}`, 'utf8'));
+  });
+};
+updateBeers();
 
 const beer = {
   type: BeerType,
@@ -49,6 +45,8 @@ const beer = {
     },
   },
   resolve: (root, { id }) => {
+    updateBeers();
+    updateTaps();
     const selectedBeer = beerList[id];
     return selectedBeer && {
       id,
@@ -56,7 +54,7 @@ const beer = {
       brewery: selectedBeer.brewery,
       category: selectedBeer.category,
       ABV: selectedBeer.ABV,
-      IBU: selectedBeer.IBU,
+      IBU: selectedBeer.IBU ? selectedBeer.IBU : 0,
       fullness: selectedBeer.fullness,
     };
   },

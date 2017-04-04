@@ -12,13 +12,24 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Footer.css';
 
 class Footer extends React.Component {
+  static randomFacing() {
+    return Math.random() > 0.5 ? 'left' : 'right';
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = { facing: Footer.randomFacing() };
+  }
+  componentDidMount() {
+    setInterval(() => this.setState({ facing: Footer.randomFacing() }), 5000);
+  }
+
+
   render() {
-    /* Randomly left/right facing laser cat */
-    const laserCatStyle = `scale(${Math.random() > 0.5 ? '1' : '-1'},1)`;
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <span className={s.laserCat} style={{ transform: laserCatStyle }} />
+          <span className={s.laserCat} style={{ transform: `scale(${this.state.facing === 'left' ? '1,1)' : '-1,1)'}` }} />
           <span className={s.text}>* alcohol for Indeed employees only</span>
         </div>
       </div>
