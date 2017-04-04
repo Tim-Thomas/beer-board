@@ -41,7 +41,7 @@ class BeerCard extends React.Component {
               &nbsp;ABV
               </span>
               <span className={s.IBUValue}>
-                {this.props.beer.IBU ? ` / ${this.props.beer.IBU}` : ''}
+                {this.props.beer.IBU ? ` / ${this.props.beer.IBU} ` : ''}
               </span>
               <span className={s.IBULabel}>
                 {this.props.beer.IBU ? 'IBU' : ''}

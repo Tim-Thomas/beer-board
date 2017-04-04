@@ -1,5 +1,7 @@
 {
-  "0": "drumroll",
-  "1": "king_julius",
-  "2": "dos_equis"
+  "1": "hans_pils",
+  "2": "original_dry_cider",
+  "3": "big_bark_amber",
+  "4": "black_butte_porter",
+  "5": "long_walk_grapefruit_ipa"
 }

@@ -12,14 +12,17 @@ import {
   GraphQLNonNull as NonNull,
 } from 'graphql';
 import * as fs from 'fs';
+import path from 'path';
 import BeerType from '../types/BeerType';
 
-const beerDataDir = 'C:\\Users\\Tim\\Desktop\\beer-board\\beer-data';
+
+const appRoot = path.resolve(__dirname);
+const beerDataDir = `${appRoot}/../beer-data`;
 const beers = {};
 let beerList = {};
 
 const updateTaps = function updateTaps() {
-  beerList = JSON.parse(fs.readFileSync(`${beerDataDir}\\kegs.txt`, 'utf8'));
+  beerList = JSON.parse(fs.readFileSync(`${beerDataDir}/kegs.txt`, 'utf8'));
   for (let i = 0; i < 6; i += 1) {
     if (beerList[i] && beers[beerList[i]]) {
       beerList[i] = beers[beerList[i]];
@@ -29,9 +32,9 @@ const updateTaps = function updateTaps() {
 updateTaps();
 
 const updateBeers = function updateBeers() {
-  const files = fs.readdirSync(`${beerDataDir}\\beers`, 'utf8');
+  const files = fs.readdirSync(`${beerDataDir}/beers`, 'utf8');
   files.forEach((element) => {
-    beers[element] = JSON.parse(fs.readFileSync(`${beerDataDir}\\beers\\${element}`, 'utf8'));
+    beers[element] = JSON.parse(fs.readFileSync(`${beerDataDir}/beers/${element}`, 'utf8'));
   });
 };
 updateBeers();

@@ -39,16 +39,16 @@ class Home extends React.Component {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        query: '{beer0:beer(id:0){id,name,category,ABV,IBU,fullness,brewery}' +
-        'beer1:beer(id:1){id,name,category,ABV,IBU,fullness,brewery}' +
-        'beer2:beer(id:2){id,name,category,ABV,IBU,fullness,brewery}' +
-        'beer3:beer(id:3){id,name,category,ABV,IBU,fullness,brewery}' +
-        'beer4:beer(id:4){id,name,category,ABV,IBU,fullness,brewery}}',
+        query: '{beer1:beer(id:1){id,name,category,ABV,IBU,fullness,brewery}' +
+                'beer2:beer(id:2){id,name,category,ABV,IBU,fullness,brewery}' +
+                'beer3:beer(id:3){id,name,category,ABV,IBU,fullness,brewery}' +
+                'beer4:beer(id:4){id,name,category,ABV,IBU,fullness,brewery}' +
+                'beer5:beer(id:5){id,name,category,ABV,IBU,fullness,brewery}}',
       }),
     });
     const { data } = await resp.json();
     this.setState(
-      { beers: [data.beer0, data.beer1, data.beer2, data.beer3, data.beer4].filter(item => item) },
+      { beers: [data.beer1, data.beer2, data.beer3, data.beer4, data.beer5].filter(item => item) },
     );
   }
 
