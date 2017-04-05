@@ -1,7 +1,7 @@
 {
-  "1": "hans_pils",
+  "1": "weisse_versa_wheat",
   "2": "original_dry_cider",
-  "3": "big_bark_amber",
+  "3": "hans_pils",
   "4": "black_butte_porter",
   "5": "long_walk_grapefruit_ipa"
 }

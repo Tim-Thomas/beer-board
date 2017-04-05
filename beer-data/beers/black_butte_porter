@@ -1,7 +1,8 @@
 {
-  "name": "King Julius",
-  "brewery": "Tree House",
-  "category": "Imperial IPA",
-  "ABV": "8.3",
+  "name": "Black Butte Porter",
+  "brewery": "Deschutes Brewery",
+  "category": "American Porter",
+  "ABV": "5.2",
+  "IBU": "30",
   "fullness": "100"
 }

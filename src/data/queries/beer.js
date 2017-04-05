@@ -58,7 +58,7 @@ const beer = {
       category: selectedBeer.category,
       ABV: selectedBeer.ABV,
       IBU: selectedBeer.IBU ? selectedBeer.IBU : 0,
-      fullness: selectedBeer.fullness,
+      fullness: Math.max(selectedBeer.fullness, 0)
     };
   },
 };
