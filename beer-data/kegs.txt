@@ -1,7 +1,7 @@
 {
-  "1": "weisse_versa_wheat",
-  "2": "original_dry_cider",
-  "3": "hans_pils",
-  "4": "black_butte_porter",
-  "5": "long_walk_grapefruit_ipa"
+  "5": "dos_equis",
+  "4": "original_dry_cider",
+  "3": "love_street",
+  "2": "gold_pils",
+  "1": "sweetwater_ipa"
 }
