@@ -1,7 +1,7 @@
 {
-  "5": "dos_equis",
-  "4": "original_dry_cider",
-  "3": "love_street",
-  "2": "gold_pils",
-  "1": "sweetwater_ipa"
+  "5": {"beer": "axis_ipa", "fullness": "100"},
+  "4": {"beer": "big_bark_amber", "fullness": "100"},
+  "3": {"beer": "dos_equis", "fullness": "100"},
+  "2": {"beer": "hans_pils", "fullness": "100"},
+  "1": {"beer": "weisse_versa_wheat", "fullness": "75"}
 }

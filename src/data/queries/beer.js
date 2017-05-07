@@ -19,13 +19,14 @@ import BeerType from '../types/BeerType';
 const appRoot = path.resolve(__dirname);
 const beerDataDir = `${appRoot}/../beer-data`;
 const beers = {};
-let beerList = {};
+const beerList = {};
 
 const updateTaps = function updateTaps() {
-  beerList = JSON.parse(fs.readFileSync(`${beerDataDir}/kegs.txt`, 'utf8'));
+  const parsedBeerList = JSON.parse(fs.readFileSync(`${beerDataDir}/kegs.txt`, 'utf8'));
   for (let i = 0; i < 6; i += 1) {
-    if (beerList[i] && beers[beerList[i]]) {
-      beerList[i] = beers[beerList[i]];
+    if (parsedBeerList[i] && beers[parsedBeerList[i].beer]) {
+      beerList[i] = beers[parsedBeerList[i].beer];
+      beerList[i].fullness = parsedBeerList[i].fullness;
     }
   }
 };
@@ -58,7 +59,7 @@ const beer = {
       category: selectedBeer.category,
       ABV: selectedBeer.ABV,
       IBU: selectedBeer.IBU ? selectedBeer.IBU : 0,
-      fullness: Math.max(selectedBeer.fullness, 0)
+      fullness: Math.max(selectedBeer.fullness, 0),
     };
   },
 };
