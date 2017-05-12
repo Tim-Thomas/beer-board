@@ -13,15 +13,6 @@
   color: #fff;
 }
 
-.laserCat {
-  background-image: url('../../../public/laser_cat.png');
-  background-size: 100px 81px;
-  display: inline-block;
-  width: 100px;
-  height: 81px;
-  vertical-align: bottom;
-}
-
 .container {
   margin: 0 auto;
   padding: 20px 15px;
@@ -31,8 +22,11 @@
 }
 
 .text {
-  font-size: 45px;
+  font-size: 38px;
   text-shadow: 2px 2px 3px #000;
   line-height: 45px;
   padding-left: 10px;
+  margin: 0 auto;
+  width: 30em;
+  font-family: 'Aldrich';
 }

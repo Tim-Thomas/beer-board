@@ -29,8 +29,7 @@ class Footer extends React.Component {
     return (
       <div className={s.root}>
         <div className={s.container}>
-          <span className={s.laserCat} style={{ transform: `scale(${this.state.facing === 'left' ? '1,1)' : '-1,1)'}` }} />
-          <span className={s.text}>* alcohol for Indeed employees only</span>
+          <span className={s.text}>LIBATIONS ARE FOR CITIZENS OF THE CAPITAL ONLY</span>
         </div>
       </div>
     );

@@ -33,6 +33,7 @@ class Html extends React.Component {
         <head>
           <link href="https://fonts.googleapis.com/css?family=Pangolin" rel="stylesheet" />
           <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet" />
+          <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet" />
           <meta charSet="utf-8" />
           <meta httpEquiv="x-ua-compatible" content="ie=edge" />
           <title>{title}</title>

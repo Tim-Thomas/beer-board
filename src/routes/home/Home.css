@@ -10,7 +10,8 @@
 @import '../../components/variables.css';
 
 .root {
-  background-image: url('../../../public/brick_background.jpg');
+  background: url('../../../public/hunger_games.jpg') center bottom no-repeat dimgray;
+  background-size: contain;
   height: 100%;
 }
 

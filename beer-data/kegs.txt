@@ -1,7 +1,7 @@
 {
-  "5": {"beer": "live_oak_hefe", "fullness": "100"},
-  "4": {"beer": "eastciders_original_dry", "fullness": "100"},
-  "3": {"beer": "zoe", "fullness": "100"},
-  "2": {"beer": "thirsty_goat_amber", "fullness": "100"},
-  "1": {"beer": "stash_ipa", "fullness": "75"}
+  "5": {"beer": "axis_ipa", "fullness": "100"},
+  "4": {"beer": "black_butte_porter", "fullness": "100"},
+  "3": {"beer": "dos_equis", "fullness": "100"},
+  "2": {"beer": "gold_pils", "fullness": "100"},
+  "1": {"beer": "hans_pils", "fullness": "75"}
 }
