@@ -14,6 +14,8 @@
   color: #fff;
   margin-bottom: 15px;
   position: relative;
+  width: 80%;
+  left: 10%;
 }
 
 .container {
@@ -40,13 +42,13 @@
 }
 
 .nameText {
-  font-size: 60px;
+  font-size: 50px;
   bottom: 4px;
   line-height: 60px;
 }
 
 .brewText {
-  font-size: 40px;
+  font-size: 30px;
   top: 12px;
   line-height: 40px;
   padding: 15px 0;

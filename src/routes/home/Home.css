@@ -10,12 +10,13 @@
 @import '../../components/variables.css';
 
 .root {
-  background-image: url('../../../public/brick_background.jpg');
+  background: url('../../../public/wanted_poster_background.png') no-repeat;
+  background-size: 100% 100%;
   height: 100%;
 }
 
 .container {
   margin: 0 auto;
-  padding: 12px 0 40px;
+  padding: 500px 0 40px;
   max-width: var(--max-content-width);
 }
